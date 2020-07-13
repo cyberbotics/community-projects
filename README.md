@@ -50,6 +50,7 @@ samples
   -> <category>
     -> controllers
       -> <controller name>
+    -> docs
     -> worlds
       -> textures
 vehicles
