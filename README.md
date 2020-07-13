@@ -74,7 +74,7 @@ vehicles
 ## How to Use it
 
 The simplest solution to use all the content of this repository is to use the Webots ''Extra projects path from the [Webots Preferences](https://cyberbotics.com/doc/guide/preferences#general).
-Some executable may need to be compiled.
+Some executables may need to be compiled.
 
 ## Disclaimer
 
