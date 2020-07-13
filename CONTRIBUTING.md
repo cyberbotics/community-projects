@@ -6,7 +6,8 @@ We love pull requests from everyone.
 
 1. Fork the repository: https://help.github.com/articles/fork-a-repo
 2. Create a branch in your fork: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
-3. Pull the branch as a pull request targeting `cyberbotics:community-projects@master`: https://help.github.com/articles/creating-a-pull-request-from-a-fork
+3. Pull the branch as a pull request targeting `cyberbotics:community-projects@master` in draft mode: https://help.github.com/articles/creating-a-pull-request-from-a-fork
+4. When your pull request is ready, mark it as ready for review: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/changing-the-stage-of-a-pull-request#marking-a-pull-request-as-ready-for-review
 4. Wait for a review.
 
 ## Development Guideline
