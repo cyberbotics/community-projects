@@ -2,7 +2,7 @@
 
 [![Chat](https://img.shields.io/discord/565154702715518986)](https://discordapp.com/invite/nTWbN9m)
 
-This repo contains Webots projects (PROTO files, controllers, simulation worlds, etc.) made by the community.
+This repo contains Webots projects (PROTO files, controllers, simulation worlds, etc.) contributed by the community.
 
 Any contribution is welcome!
 
