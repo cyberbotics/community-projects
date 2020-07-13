@@ -15,3 +15,4 @@ We love pull requests from everyone.
 * Try to follow our [Coding Style](https://github.com/cyberbotics/webots/wiki/Coding-Style/).
 * Avoid comitting files that exist elsewhere. Instead you should link to the source of these files.
 * Avoid comitting files that can be re-created from other files using a Makefile, a script or a compiler.
+* Document your project in a `docs` folder using the [Github Markdown](https://guides.github.com/features/mastering-markdown/) (*.md files) syntax.
