@@ -2,7 +2,7 @@
 
 [![Chat](https://img.shields.io/discord/565154702715518986)](https://discordapp.com/invite/nTWbN9m)
 
-This repo contains Webots projects (PROTO files, controllers, wimulation worlds, etc.) made by the community.
+This repo contains Webots projects (PROTO files, controllers, simulation worlds, etc.) made by the community.
 
 Any contribution is welcome!
 
@@ -73,7 +73,7 @@ vehicles
 
 ## How to Use it
 
-The simplest solution to use all the content of this repository is to use the Webots ''Extra projects path from the [Webots Preferences](https://cyberbotics.com/doc/guide/preferences#general).
+The simplest solution to use all the content of this repository is to use the Webots 'Extra projects path' from the [Webots Preferences](https://cyberbotics.com/doc/guide/preferences#general).
 Some executables may need to be compiled.
 
 ## Disclaimer
