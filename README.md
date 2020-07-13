@@ -1,6 +1,6 @@
 # community-projects
 
-[![Chat](https://img.shields.io/discord/565154702715518986)](https://discordapp.com/invite/nTWbN9m
+[![Chat](https://img.shields.io/discord/565154702715518986)](https://discordapp.com/invite/nTWbN9m)
 
 This repo contains Webots projects (PROTO files, controllers, wimulation worlds, etc.) made by the community.
 
