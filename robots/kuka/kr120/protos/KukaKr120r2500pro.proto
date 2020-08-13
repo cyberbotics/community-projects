@@ -1,0 +1,331 @@
+#VRML_SIM R2020b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the KukaKr120r2500pro
+# Extracted from: model.urdf
+
+PROTO KukaKr120r2500pro [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        1 0 0 -1.5708
+  field  SFString    controller      "void" # Is `Robot.controller`.
+  field  MFString    controllerArgs  []     # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""     # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE  # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE   # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE  # Is `Robot.selfCollision`.
+  field  SFBool      staticBase      TRUE   # Defines if the robot base should be pinned to the static environment.
+  field  MFNode      toolSlot        []     # Extend the robot with new nodes at the end of the arm.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      KukaKr120r2500pro_base_link_0Mesh {
+      }
+      KukaKr120r2500pro_base_link_1Mesh {
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0.000000 0.000000 -1.000000
+          anchor 0.000000 0.000000 0.675000
+          dampingConstant 0.0
+          staticFriction 0.0
+        }
+        device [
+          RotationalMotor {
+            name "joint_a1"
+            maxVelocity 2.72271363311
+            minPosition -3.22885911619
+            maxPosition 3.22885911619
+            maxTorque 10000
+          }
+          PositionSensor {
+            name "joint_a1_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation 0.000000 0.000000 0.675000
+          rotation 0.000000 1.000000 0.000000 0.000000
+          children [
+            KukaKr120r2500pro_link_1_0Mesh {
+            }
+            KukaKr120r2500pro_link_1_1Mesh {
+            }
+            KukaKr120r2500pro_link_1_2Mesh {
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0.000000 1.000000 0.000000
+                anchor 0.350000 0.000000 0.000000
+                dampingConstant 0.0
+                staticFriction 0.0
+              }
+              device [
+                RotationalMotor {
+                  name "joint_a2"
+                  maxVelocity 2.72271363311
+                  minPosition -2.70526034059
+                  maxPosition 0.610865238198
+                  maxTorque 10000
+                }
+                PositionSensor {
+                  name "joint_a2_sensor"
+                }
+              ]
+              endPoint Solid {
+                translation 0.350000 0.000000 0.000000
+                rotation 0.000000 1.000000 0.000000 0.000000
+                children [
+                  KukaKr120r2500pro_link_2_0Mesh {
+                  }
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0.000000 1.000000 0.000000
+                      anchor 1.150000 0.000000 0.000000
+                      dampingConstant 0.0
+                      staticFriction 0.0
+                    }
+                    device [
+                      RotationalMotor {
+                        name "joint_a3"
+                        maxVelocity 2.72271363311
+                        minPosition -2.26892802759
+                        maxPosition 2.68780704807
+                        maxTorque 10000
+                      }
+                      PositionSensor {
+                        name "joint_a3_sensor"
+                      }
+                    ]
+                    endPoint Solid {
+                      translation 1.150000 0.000000 0.000000
+                      rotation 0.000000 1.000000 0.000000 0.000000
+                      children [
+                        KukaKr120r2500pro_link_3_0Mesh {
+                        }
+                        KukaKr120r2500pro_link_3_1Mesh {
+                        }
+                        KukaKr120r2500pro_link_3_2Mesh {
+                        }
+                        KukaKr120r2500pro_link_3_3Mesh {
+                        }
+                        KukaKr120r2500pro_link_3_4Mesh {
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            axis -1.000000 0.000000 0.000000
+                            anchor 1.000000 0.000000 -0.041000
+                            dampingConstant 0.0
+                            staticFriction 0.0
+                          }
+                          device [
+                            RotationalMotor {
+                              name "joint_a4"
+                              maxVelocity 5.75958653158
+                              minPosition -6.10865238198
+                              maxPosition 6.10865238198
+                              maxTorque 10000
+                            }
+                            PositionSensor {
+                              name "joint_a4_sensor"
+                            }
+                          ]
+                          endPoint Solid {
+                            translation 1.000000 0.000000 -0.041000
+                            rotation 0.000000 1.000000 0.000000 0.000000
+                            children [
+                              KukaKr120r2500pro_link_4_0Mesh {
+                              }
+                              HingeJoint {
+                                jointParameters HingeJointParameters {
+                                  axis 0.000000 1.000000 0.000000
+                                  anchor 0.000000 0.000000 0.000000
+                                  dampingConstant 0.0
+                                  staticFriction 0.0
+                                }
+                                device [
+                                  RotationalMotor {
+                                    name "joint_a5"
+                                    maxVelocity 5.75958653158
+                                    minPosition -2.26892802759
+                                    maxPosition 2.26892802759
+                                    maxTorque 10000
+                                  }
+                                  PositionSensor {
+                                    name "joint_a5_sensor"
+                                  }
+                                ]
+                                endPoint Solid {
+                                  translation 0.000000 0.000000 0.000000
+                                  rotation 0.000000 1.000000 0.000000 0.000000
+                                  children [
+                                    KukaKr120r2500pro_link_5_0Mesh {
+                                    }
+                                    HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                        axis -1.000000 0.000000 0.000000
+                                        anchor 0.000000 0.000000 0.000000
+                                        dampingConstant 0.0
+                                        staticFriction 0.0
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "joint_a6"
+                                          maxVelocity 10.7337748998
+                                          minPosition -6.10865238198
+                                          maxPosition 6.10865238198
+                                          maxTorque 10000
+                                        }
+                                        PositionSensor {
+                                          name "joint_a6_sensor"
+                                        }
+                                      ]
+                                      endPoint Solid {
+                                        translation 0.000000 0.000000 0.000000
+                                        rotation 0.000000 1.000000 0.000000 0.000000
+                                        children [
+                                          KukaKr120r2500pro_link_6_0Mesh {
+                                          }
+                                          Solid {
+                                            translation 0.215000 0.000000 0.000000
+                                            rotation 0.000000 1.000000 0.000000 1.570796
+                                            children [
+                                              Group {
+                                                children IS toolSlot
+                                              }
+                                            ]
+                                            name "tool0"
+                                          }
+                                        ]
+                                        name "link_6"
+                                        boundingObject Transform {
+                                          translation 0.201480 0.000000 -0.000033
+                                          children [
+                                            Box {
+                                              size 0.027000 0.141998 0.141978
+                                            }
+                                          ]
+                                        }
+                                        physics Physics {
+                                          density -1
+                                          mass 2.000000
+                                          centerOfMass [ 0.000000 0.000000 0.000000 ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                  name "link_5"
+                                  boundingObject Transform {
+                                    translation 0.045992 0.014542 -0.000023
+                                    children [
+                                      Box {
+                                        size 0.303976 0.306472 0.211997
+                                      }
+                                    ]
+                                  }
+                                  physics Physics {
+                                    density -1
+                                    mass 2.000000
+                                    centerOfMass [ 0.000000 0.000000 0.000000 ]
+                                  }
+                                }
+                              }
+                            ]
+                            name "link_4"
+                            boundingObject Transform {
+                              translation -0.083201 0.000000 -0.000028
+                              children [
+                                Box {
+                                  size 0.344626 0.201997 0.201988
+                                }
+                              ]
+                            }
+                            physics Physics {
+                              density -1
+                              mass 2.000000
+                              centerOfMass [ 0.000000 0.000000 0.000000 ]
+                            }
+                          }
+                        }
+                      ]
+                      name "link_3"
+                      boundingObject Transform {
+                        translation 0.181993 0.059749 -0.034836
+                        children [
+                          Box {
+                            size 1.238984 0.475494 0.429351
+                          }
+                        ]
+                      }
+                      physics Physics {
+                        density -1
+                        mass 2.000000
+                        centerOfMass [ 0.000000 0.000000 0.000000 ]
+                      }
+                    }
+                  }
+                ]
+                name "link_2"
+                boundingObject Transform {
+                  translation 0.556603 -0.209202 -0.002376
+                  children [
+                    Box {
+                      size 1.514732 0.438406 0.532485
+                    }
+                  ]
+                }
+                physics Physics {
+                  density -1
+                  mass 2.000000
+                  centerOfMass [ 0.000000 0.000000 0.000000 ]
+                }
+              }
+            }
+          ]
+          name "link_1"
+          boundingObject Transform {
+            translation 0.023430 -0.002250 -0.121803
+            children [
+              Box {
+                size 1.084741 0.503493 0.675199
+              }
+            ]
+          }
+          physics Physics {
+            density -1
+            mass 2.000000
+            centerOfMass [ 0.000000 0.000000 0.000000 ]
+          }
+        }
+      }
+      Solid {
+        translation 0.000000 0.000000 0.000000
+        rotation 0.000000 1.000000 0.000000 0.000000
+        name "base"
+      }
+    ]
+    name "base_link"
+    boundingObject Transform {
+      translation -0.111170 0.000000 0.186338
+      children [
+        Box {
+          size 1.036985 0.829846 0.372677
+        }
+      ]
+    }
+    %{ if fields.staticBase.value == false then }%
+    physics Physics {
+      density -1
+      mass 2.000000
+      centerOfMass [ 0.000000 0.000000 0.000000 ]
+    }
+    %{ end }%
+  }
+}
