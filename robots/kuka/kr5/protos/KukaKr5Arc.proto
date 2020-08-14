@@ -1,10 +1,10 @@
 #VRML_SIM R2020b utf8
 # license: Apache License 2.0
 # license url: http://www.apache.org/licenses/LICENSE-2.0
-# This is a proto file for Webots for the KukaLbrIiwa14R820
+# This is a proto file for Webots for the KukaKr5Arc
 # Extracted from: model.urdf
 
-PROTO KukaLbrIiwa14R820 [
+PROTO KukaKr5Arc [
   field  SFVec3f     translation     0 0 0
   field  SFRotation  rotation        1 0 0 -1.5708
   field  SFString    controller      "void" # Is `Robot.controller`.
@@ -27,21 +27,27 @@ PROTO KukaLbrIiwa14R820 [
     synchronization IS synchronization
     selfCollision IS selfCollision
     children [
-      KukaLbrIiwa14R820_base_link_0Mesh {
+      KukaKr5Arc_base_link_0Mesh {
+      }
+      KukaKr5Arc_base_link_1Mesh {
+      }
+      KukaKr5Arc_base_link_2Mesh {
+      }
+      KukaKr5Arc_base_link_3Mesh {
       }
       HingeJoint {
         jointParameters HingeJointParameters {
-          axis 0.000000 0.000000 1.000000
-          anchor 0.000000 0.000000 0.000000
+          axis 0.000000 0.000000 -1.000000
+          anchor 0.000000 0.000000 0.400000
           dampingConstant 0.0
           staticFriction 0.0
         }
         device [
           RotationalMotor {
             name "joint_a1"
-            maxVelocity 1.4834
-            minPosition -2.9668
-            maxPosition 2.9668
+            maxVelocity 2.68780704807
+            minPosition -2.70526034059
+            maxPosition 2.70526034059
             maxTorque 10000
           }
           PositionSensor {
@@ -49,24 +55,36 @@ PROTO KukaLbrIiwa14R820 [
           }
         ]
         endPoint Solid {
-          translation 0.000000 0.000000 0.000000
-          rotation 0.000000 1.000000 0.000000 0.000000
+          translation 0.000000 0.000000 0.400000
+          rotation 1.000000 0.000000 -0.000000 3.141593
           children [
-            KukaLbrIiwa14R820_link_1_0Mesh {
+            KukaKr5Arc_link_1_0Mesh {
+            }
+            KukaKr5Arc_link_1_1Mesh {
+            }
+            KukaKr5Arc_link_1_2Mesh {
+            }
+            KukaKr5Arc_link_1_3Mesh {
+            }
+            KukaKr5Arc_link_1_4Mesh {
+            }
+            KukaKr5Arc_link_1_5Mesh {
+            }
+            KukaKr5Arc_link_1_6Mesh {
             }
             HingeJoint {
               jointParameters HingeJointParameters {
-                axis 0.000000 1.000000 0.000000
-                anchor -0.000436 0.000000 0.360000
+                axis 0.000000 -1.000000 0.000000
+                anchor 0.180000 0.000000 0.000000
                 dampingConstant 0.0
                 staticFriction 0.0
               }
               device [
                 RotationalMotor {
                   name "joint_a2"
-                  maxVelocity 1.4834
-                  minPosition -2.0942
-                  maxPosition 2.0942
+                  maxVelocity 2.68780704807
+                  minPosition -3.14159265359
+                  maxPosition 1.1344640138
                   maxTorque 10000
                 }
                 PositionSensor {
@@ -74,26 +92,34 @@ PROTO KukaLbrIiwa14R820 [
                 }
               ]
               endPoint Solid {
-                translation -0.000436 0.000000 0.360000
-                rotation 0.000000 1.000000 0.000000 0.000000
+                translation 0.180000 0.000000 0.000000
+                rotation 1.000000 0.000000 0.000000 1.570796
                 children [
-                  KukaLbrIiwa14R820_link_2_0Mesh {
+                  KukaKr5Arc_link_2_0Mesh {
                   }
-                  KukaLbrIiwa14R820_link_2_1Mesh {
+                  KukaKr5Arc_link_2_1Mesh {
+                  }
+                  KukaKr5Arc_link_2_2Mesh {
+                  }
+                  KukaKr5Arc_link_2_3Mesh {
+                  }
+                  KukaKr5Arc_link_2_4Mesh {
+                  }
+                  KukaKr5Arc_link_2_5Mesh {
                   }
                   HingeJoint {
                     jointParameters HingeJointParameters {
                       axis 0.000000 0.000000 1.000000
-                      anchor 0.000000 0.000000 0.000000
+                      anchor 0.600000 0.000000 0.000000
                       dampingConstant 0.0
                       staticFriction 0.0
                     }
                     device [
                       RotationalMotor {
                         name "joint_a3"
-                        maxVelocity 1.7452
-                        minPosition -2.9668
-                        maxPosition 2.9668
+                        maxVelocity 3.97935069455
+                        minPosition -0.261799387799
+                        maxPosition 2.75762021815
                         maxTorque 10000
                       }
                       PositionSensor {
@@ -101,28 +127,30 @@ PROTO KukaLbrIiwa14R820 [
                       }
                     ]
                     endPoint Solid {
-                      translation 0.000000 0.000000 0.000000
+                      translation 0.600000 0.000000 0.000000
                       rotation 0.000000 1.000000 0.000000 0.000000
                       children [
-                        KukaLbrIiwa14R820_link_3_0Mesh {
+                        KukaKr5Arc_link_3_0Mesh {
                         }
-                        KukaLbrIiwa14R820_link_3_1Mesh {
+                        KukaKr5Arc_link_3_1Mesh {
                         }
-                        KukaLbrIiwa14R820_link_3_2Mesh {
+                        KukaKr5Arc_link_3_2Mesh {
+                        }
+                        KukaKr5Arc_link_3_3Mesh {
                         }
                         HingeJoint {
                           jointParameters HingeJointParameters {
-                            axis 0.000000 -1.000000 0.000000
-                            anchor 0.000436 0.000000 0.420000
+                            axis -1.000000 0.000000 0.000000
+                            anchor 0.000000 -0.120000 0.000000
                             dampingConstant 0.0
                             staticFriction 0.0
                           }
                           device [
                             RotationalMotor {
                               name "joint_a4"
-                              maxVelocity 1.3089
-                              minPosition -2.0942
-                              maxPosition 2.0942
+                              maxVelocity 5.98647933434
+                              minPosition -6.10865238198
+                              maxPosition 6.10865238198
                               maxTorque 10000
                             }
                             PositionSensor {
@@ -130,26 +158,26 @@ PROTO KukaLbrIiwa14R820 [
                             }
                           ]
                           endPoint Solid {
-                            translation 0.000436 0.000000 0.420000
-                            rotation 0.000000 1.000000 0.000000 0.000000
+                            translation 0.000000 -0.120000 0.000000
+                            rotation 0.000000 -1.000000 0.000000 1.570796
                             children [
-                              KukaLbrIiwa14R820_link_4_1Mesh {
+                              KukaKr5Arc_link_4_0Mesh {
                               }
-                              KukaLbrIiwa14R820_link_4_2Mesh {
+                              KukaKr5Arc_link_4_1Mesh {
                               }
                               HingeJoint {
                                 jointParameters HingeJointParameters {
-                                  axis 0.000000 0.000000 1.000000
-                                  anchor 0.000000 0.000000 0.000000
+                                  axis 1.000000 0.000000 0.000000
+                                  anchor 0.000000 0.000000 -0.620000
                                   dampingConstant 0.0
                                   staticFriction 0.0
                                 }
                                 device [
                                   RotationalMotor {
                                     name "joint_a5"
-                                    maxVelocity 2.2688
-                                    minPosition -2.9668
-                                    maxPosition 2.9668
+                                    maxVelocity 6.70206432766
+                                    minPosition -2.26892802759
+                                    maxPosition 2.26892802759
                                     maxTorque 10000
                                   }
                                   PositionSensor {
@@ -157,28 +185,24 @@ PROTO KukaLbrIiwa14R820 [
                                   }
                                 ]
                                 endPoint Solid {
-                                  translation 0.000000 0.000000 0.000000
-                                  rotation 0.000000 1.000000 0.000000 0.000000
+                                  translation 0.000000 0.000000 -0.620000
+                                  rotation 0.000000 1.000000 0.000000 1.570796
                                   children [
-                                    KukaLbrIiwa14R820_link_5_0Mesh {
-                                    }
-                                    KukaLbrIiwa14R820_link_5_1Mesh {
-                                    }
-                                    KukaLbrIiwa14R820_link_5_2Mesh {
+                                    KukaKr5Arc_link_5_0Mesh {
                                     }
                                     HingeJoint {
                                       jointParameters HingeJointParameters {
-                                        axis 0.000000 1.000000 0.000000
-                                        anchor 0.000000 0.000000 0.400000
+                                        axis -1.000000 0.000000 0.000000
+                                        anchor 0.000000 0.000000 0.000000
                                         dampingConstant 0.0
                                         staticFriction 0.0
                                       }
                                       device [
                                         RotationalMotor {
                                           name "joint_a6"
-                                          maxVelocity 2.356
-                                          minPosition -2.0942
-                                          maxPosition 2.0942
+                                          maxVelocity 12.5838239069
+                                          minPosition -6.10865238198
+                                          maxPosition 6.10865238198
                                           maxTorque 10000
                                         }
                                         PositionSensor {
@@ -186,99 +210,51 @@ PROTO KukaLbrIiwa14R820 [
                                         }
                                       ]
                                       endPoint Solid {
-                                        translation 0.000000 0.000000 0.400000
-                                        rotation 0.000000 1.000000 0.000000 0.000000
+                                        translation 0.000000 0.000000 0.000000
+                                        rotation 0.000000 -1.000000 0.000000 1.570796
                                         children [
-                                          KukaLbrIiwa14R820_link_6_0Mesh {
+                                          KukaKr5Arc_link_6_0Mesh {
                                           }
-                                          KukaLbrIiwa14R820_link_6_1Mesh {
-                                          }
-                                          HingeJoint {
-                                            jointParameters HingeJointParameters {
-                                              axis 0.000000 0.000000 1.000000
-                                              anchor 0.000000 0.000000 0.000000
-                                              dampingConstant 0.0
-                                              staticFriction 0.0
-                                            }
-                                            device [
-                                              RotationalMotor {
-                                                name "joint_a7"
-                                                maxVelocity 2.356
-                                                minPosition -3.0541
-                                                maxPosition 3.0541
-                                                maxTorque 10000
-                                              }
-                                              PositionSensor {
-                                                name "joint_a7_sensor"
+                                          Solid {
+                                            translation 0.000000 0.000000 -0.115000
+                                            rotation -0.707107 -0.707107 0.000000 3.141593
+                                            children [
+                                              Group {
+                                                children IS toolSlot
                                               }
                                             ]
-                                            endPoint Solid {
-                                              translation 0.000000 0.000000 0.000000
-                                              rotation 0.000000 1.000000 0.000000 0.000000
-                                              children [
-                                                KukaLbrIiwa14R820_link_7_0Mesh {
-                                                }
-                                                KukaLbrIiwa14R820_link_7_1Mesh {
-                                                }
-                                                KukaLbrIiwa14R820_link_7_2Mesh {
-                                                }
-                                                Solid {
-                                                  translation 0.000000 0.000000 0.126000
-                                                  rotation 0.000000 1.000000 0.000000 0.000000
-                                                  children [
-                                                    Group {
-                                                      children IS toolSlot
-                                                    }
-                                                  ]
-                                                  name "tool0"
-                                                }
-                                              ]
-                                              name "link_7"
-                                              boundingObject Transform {
-                                                translation -0.000001 0.000009 0.098559
-                                                children [
-                                                  Box {
-                                                    size 0.103694 0.103857 0.054917
-                                                  }
-                                                ]
-                                              }
-                                              physics Physics {
-                                                density -1
-                                                mass 1.000000
-                                                centerOfMass [ 0.000000 0.000000 0.000000 ]
-                                              }
-                                            }
+                                            name "tool0"
                                           }
                                         ]
                                         name "link_6"
                                         boundingObject Transform {
-                                          translation -0.000066 -0.001862 -0.002791
+                                          translation 0.000000 0.000000 -0.111899
                                           children [
                                             Box {
-                                              size 0.132602 0.137681 0.167384
+                                              size 0.049901 0.049999 0.006200
                                             }
                                           ]
                                         }
                                         physics Physics {
                                           density -1
-                                          mass 1.000000
-                                          centerOfMass [ 0.000000 0.000000 0.000000 ]
+                                          mass 0.078949
+                                          centerOfMass [ 0.009839 -0.000028 -0.000000 ]
                                         }
                                       }
                                     }
                                   ]
                                   name "link_5"
                                   boundingObject Transform {
-                                    translation -0.000121 -0.015503 0.313087
+                                    translation 0.030150 0.000000 0.007504
                                     children [
                                       Box {
-                                        size 0.136273 0.167034 0.277175
+                                        size 0.157298 0.096996 0.100991
                                       }
                                     ]
                                   }
                                   physics Physics {
                                     density -1
-                                    mass 1.000000
+                                    mass 0.328309
                                     centerOfMass [ 0.000000 0.000000 0.000000 ]
                                   }
                                 }
@@ -286,68 +262,68 @@ PROTO KukaLbrIiwa14R820 [
                             ]
                             name "link_4"
                             boundingObject Transform {
-                              translation 0.000269 -0.023503 0.058414
+                              translation -0.001664 0.000000 -0.507601
                               children [
                                 Box {
-                                  size 0.136926 0.183015 0.252173
+                                  size 0.154670 0.132181 0.313212
                                 }
                               ]
                             }
                             physics Physics {
                               density -1
-                              mass 1.000000
-                              centerOfMass [ 0.000000 0.000000 0.000000 ]
+                              mass 2.068097
+                              centerOfMass [ 0.085749 -0.001494 -0.002716 ]
                             }
                           }
                         }
                       ]
                       name "link_3"
                       boundingObject Transform {
-                        translation -0.000008 0.023336 0.341069
+                        translation 0.037500 -0.051464 -0.082531
                         children [
                           Box {
-                            size 0.136049 0.182662 0.293272
+                            size 0.626992 0.279067 0.440233
                           }
                         ]
                       }
                       physics Physics {
                         density -1
-                        mass 1.000000
-                        centerOfMass [ 0.000000 0.000000 0.000000 ]
+                        mass 4.359340
+                        centerOfMass [ 0.075503 -0.046482 -0.005065 ]
                       }
                     }
                   }
                 ]
                 name "link_2"
                 boundingObject Transform {
-                  translation -0.000028 0.032194 0.059714
+                  translation 0.292087 -0.020254 -0.074116
                   children [
                     Box {
-                      size 0.171320 0.199618 0.289575
+                      size 0.750860 0.207504 0.472228
                     }
                   ]
                 }
                 physics Physics {
                   density -1
-                  mass 1.000000
-                  centerOfMass [ 0.000000 0.000000 0.000000 ]
+                  mass 4.649746
+                  centerOfMass [ 0.006102 0.040112 -0.115311 ]
                 }
               }
             }
           ]
           name "link_1"
           boundingObject Transform {
-            translation -0.000100 -0.014686 0.296207
+            translation 0.045619 0.034243 0.058249
             children [
               Box {
-                size 0.171682 0.202325 0.297430
+                size 0.482754 0.465482 0.332496
               }
             ]
           }
           physics Physics {
             density -1
-            mass 1.000000
-            centerOfMass [ 0.000000 0.000000 0.000000 ]
+            mass 5.772423
+            centerOfMass [ 0.035997 0.007838 -0.086497 ]
           }
         }
       }
@@ -359,18 +335,18 @@ PROTO KukaLbrIiwa14R820 [
     ]
     name "base_link"
     boundingObject Transform {
-      translation -0.007265 0.000030 0.078750
+      translation -0.100856 -0.022840 0.112499
       children [
         Box {
-          size 0.257471 0.242590 0.157500
+          size 0.532348 0.376316 0.224997
         }
       ]
     }
     %{ if fields.staticBase.value == false then }%
     physics Physics {
       density -1
-      mass 1.000000
-      centerOfMass [ 0.000000 0.000000 0.000000 ]
+      mass 7.585857
+      centerOfMass [ -0.017519 0.000001 0.097592 ]
     }
     %{ end }%
   }
