@@ -14,27 +14,13 @@
 
 """Demonstration of inverse kinematics using the "ikpy" Python module."""
 
-import sys
-import tempfile
 import numpy as np
 from controller import Supervisor
-from scipy.spatial.transform import Rotation as R
 
 # import custom scripts. Located in the same directory as this controller
 from get_relative_position import RelativePositions
 from ik_module import inverseKinematics
 from spawn_target import spawnTarget
-
-try:
-    import ikpy
-except ImportError:
-    sys.exit('The "ikpy" Python module is not installed. '
-             'To run this sample, please upgrade "pip" and install ikpy with this command: "pip install ikpy"')
-
-if ikpy.__version__[0] < '3':
-    sys.exit('The "ikpy" Python module version is too old. '
-             'Please upgrade "ikpy" Python module to version "3.0" or newer with this command: "pip install --upgrade ikpy"')
-
 
 # ----------------------------------------------------------
 # CONFIGURATION
