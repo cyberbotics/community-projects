@@ -1,0 +1,60 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  basicTimeStep 16
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.9944585328663142 -0.10284538304268112 -0.021795724263762997 0.7597448038022628
+  position -0.080546513752037 2.5616312288532073 2.6301726976621063
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3 3
+  floorTileSize 0.25 0.25
+  wallHeight 0.05
+}
+DEF TARGET Solid {
+  translation 0.26 0.4 0.42
+  rotation -1 0 0 -1.5708053071795867
+  scale 0.4 0.4 0.4
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/target.png"
+          ]
+        }
+        roughnessMap ImageTexture {
+          url [
+            "textures/target.png"
+          ]
+        }
+        metalnessMap ImageTexture {
+          url [
+            "textures/target.png"
+          ]
+        }
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/target.png"
+          ]
+        }
+        textureTransform TextureTransform {
+          scale 2 1
+        }
+      }
+      geometry Sphere {
+        radius 0.1
+        subdivision 2
+      }
+    }
+  ]
+}
+KukaKr5Arc {
+  controller "generic_inverse_kinematic"
+  supervisor TRUE
+}
