@@ -46,8 +46,8 @@ PROTO KukaKr5Arc [
           RotationalMotor {
             name "joint_a1"
             maxVelocity 2.68780704807
-            minPosition -9.70526034059
-            maxPosition 9.70526034059
+            minPosition -2.70526034059
+            maxPosition 2.70526034059
             maxTorque 10000
           }
           PositionSensor {
@@ -83,8 +83,8 @@ PROTO KukaKr5Arc [
                 RotationalMotor {
                   name "joint_a2"
                   maxVelocity 2.68780704807
-                  minPosition -9.14159265359
-                  maxPosition 9.1344640138
+                  minPosition -3.14159265359
+                  maxPosition 1.1344640138
                   maxTorque 10000
                 }
                 PositionSensor {
@@ -118,8 +118,8 @@ PROTO KukaKr5Arc [
                       RotationalMotor {
                         name "joint_a3"
                         maxVelocity 3.97935069455
-                        minPosition -9.261799387799
-                        maxPosition 9
+                        minPosition -0.261799387799
+                        maxPosition 2.75762021815
                         maxTorque 10000
                       }
                       PositionSensor {
@@ -149,8 +149,8 @@ PROTO KukaKr5Arc [
                             RotationalMotor {
                               name "joint_a4"
                               maxVelocity 5.98647933434
-                              minPosition -9.10865238198
-                              maxPosition 9.10865238198
+                              minPosition -6.10865238198
+                              maxPosition 6.10865238198
                               maxTorque 10000
                             }
                             PositionSensor {
@@ -176,8 +176,8 @@ PROTO KukaKr5Arc [
                                   RotationalMotor {
                                     name "joint_a5"
                                     maxVelocity 6.70206432766
-                                    minPosition -9.26892802759
-                                    maxPosition 9.26892802759
+                                    minPosition -2.26892802759
+                                    maxPosition 2.26892802759
                                     maxTorque 10000
                                   }
                                   PositionSensor {
@@ -201,8 +201,8 @@ PROTO KukaKr5Arc [
                                         RotationalMotor {
                                           name "joint_a6"
                                           maxVelocity 12.5838239069
-                                          minPosition -9.10865238198
-                                          maxPosition 9
+                                          minPosition -6.10865238198
+                                          maxPosition 6.10865238198
                                           maxTorque 10000
                                         }
                                         PositionSensor {

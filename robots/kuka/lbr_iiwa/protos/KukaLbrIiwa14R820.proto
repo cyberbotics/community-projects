@@ -223,8 +223,8 @@ PROTO KukaLbrIiwa14R820 [
                                                 KukaLbrIiwa14R820_link_7_2Mesh {
                                                 }
                                                 Solid {
-                                                  translation 0.000000 0.000000 0.126000 
-                                                  rotation 0.000000 1.000000 0.000000 0
+                                                  translation 0.000000 0.000000 0.126000
+                                                  rotation 0.000000 1.000000 0.000000 0.000000
                                                   children [
                                                     Group {
                                                       children IS toolSlot
