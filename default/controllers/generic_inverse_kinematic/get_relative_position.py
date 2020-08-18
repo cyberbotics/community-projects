@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class RelativePositions():
     def __init__(self, Supervisor):
         self.robot = Supervisor

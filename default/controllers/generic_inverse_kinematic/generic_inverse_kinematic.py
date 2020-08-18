@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Demonstration of inverse kinematics using the "ikpy" Python module."""
-
+import sys
 import numpy as np
 from controller import Supervisor
 
@@ -35,9 +34,14 @@ IKstepSize = 10
 
 # Initialize the Webots Supervisor.
 supervisor = Supervisor()
+if not supervisor.getSupervisor():
+    sys.exit('WARNING: Your robot is not a supervisor! Set the supervisor field to True and restart the controller.')
+
 timeStep = int(supervisor.getBasicTimeStep())
+# Initialize our inverse kinematics module
 ik = inverseKinematics(supervisor)
 
+# check if our world already has the TARGET node. If not, we spawn it.
 target = supervisor.getFromDef('TARGET')
 try:
     target.getPosition()
@@ -46,8 +50,7 @@ except:
     spawnTarget(supervisor)
     
 
-
-# Initialize the RelativePositions class
+# Initialize the RelativePositions module
 RelPos = RelativePositions(supervisor)
 
 # Initialize the arm motors and sensors. 

@@ -96,16 +96,20 @@ class inverseKinematics():
         self.toolSlot_axis = ['X', 'Y', 'Z'][self.rot_index]
 
     def get_ik(self, target_pos, target_rot=None):   
+        # check if a target_rot is requested (3x3 numpy array)
         if np.sum(target_rot) == None:
+            # Call "ikpy" to compute the inverse kinematics of the arm WITHOUT orientation
             return self.armChain.inverse_kinematics(target_pos)
         else:
             # get the rotation vector from the target_rot rotation matrix, depending on which axis points out of the toolSlot
             rot_vector = [target_rot[0,self.rot_index],target_rot[1,self.rot_index],target_rot[2,self.rot_index]]
             
-            # Call "ikpy" to compute the inverse kinematics of the arm.   
+            # Call "ikpy" to compute the inverse kinematics of the arm WITH orientation   
             ikResults = self.armChain.inverse_kinematics(target_pos, target_orientation=rot_vector, orientation_mode=self.toolSlot_axis)
-            if sum(ikResults) == 0: # dealing with singularity
-                rot_vector_new = np.array(rot_vector) + np.full((1,3), 0.0000001) # tiny change in the orientation vector to avoid singularity
+
+            # if ikResults is all zeros, we are dealing with a singularity
+            if sum(ikResults) == 0: 
+                # tiny change in the orientation vector to avoid singularity
+                rot_vector_new = np.array(rot_vector) + np.full((1,3), 0.0000001) 
                 ikResults = self.armChain.inverse_kinematics(target_pos, target_orientation=rot_vector_new, orientation_mode=toolSlot_axis)
             return ikResults
-
