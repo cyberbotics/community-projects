@@ -188,6 +188,12 @@ PROTO Mirobot [
                                               }
                                             ]
                                             name "tool0"
+                                            boundingObject Box {
+                                                   size 0.01 0.01 0.01
+                                                }
+                                            physics Physics {
+                                              centerOfMass [ 0 0 0 ]
+                                            }
                                           }
                                         ]
                                         name "Link6"
