@@ -14,6 +14,7 @@
 import os
 from shutil import copyfile
 
+
 class spawnTarget():
     def __init__(self, supervisor):
         targetSphereString = """
@@ -56,9 +57,9 @@ class spawnTarget():
         ]
         }
         """
-        # copy the target.png texture into our wold  
+        # copy the target.png texture into our wold
         controllerPath = os.path.dirname(os.path.abspath(__file__))
-        worldPath = os.path.dirname(supervisor.getWorldPath())+ '/textures/'
+        worldPath = os.path.dirname(supervisor.getWorldPath()) + '/textures/'
         if not os.path.exists(worldPath):
             os.makedirs(worldPath)
         copyfile(controllerPath + '/textures/target.png', worldPath + 'target.png')

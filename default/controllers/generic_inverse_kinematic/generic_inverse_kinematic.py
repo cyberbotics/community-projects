@@ -24,10 +24,10 @@ from spawn_target import spawnTarget
 # ----------------------------------------------------------
 # CONFIGURATION
 # ----------------------------------------------------------
-# how many simulationsteps before calculating the next IK solution. This 
+# how many simulationsteps before calculating the next IK solution. This
 # is only relevant, if the target is constantly changing, as no new IK
 # solution gets calculated, if the target did not change.
-IKstepSize = 10 
+IKstepSize = 10
 
 # Whether we want to want to solve for the Target rotation
 useRotation = True
@@ -48,55 +48,53 @@ if not supervisor.getSupervisor():
 
 timeStep = int(supervisor.getBasicTimeStep())
 # Initialize our inverse kinematics module
-ik = inverseKinematics(supervisor,last_link_vector)
+ik = inverseKinematics(supervisor, last_link_vector)
 
 # check if our world already has the TARGET node. If not, we spawn it.
 target = supervisor.getFromDef('TARGET')
 try:
     target.getPosition()
-except:
+except Exception as e:
     print('No TARGET defined. Spawning TARGET sphere')
     spawnTarget(supervisor)
-    
 
 # Initialize the RelativePositions module
 RelPos = RelativePositions(supervisor)
 
-# Initialize the arm motors and sensors. 
+# Initialize the arm motors and sensors.
 n = supervisor.getNumberOfDevices()
 motors = []
 sensors = []
 for i in range(n):
     device = supervisor.getDeviceByIndex(i)
-    #print(device.getName(), '   - NodeType:', device.getNodeType())
+    # print(device.getName(), '   - NodeType:', device.getNodeType())
     if device.getNodeType() == 54:
         motors.append(device)
         sensor = device.getPositionSensor()
         try:
             sensor.getName()
             sensors.append(sensor)
-            sensor.enable(timeStep)  
-        except:
+            sensor.enable(timeStep)
+        except Exception as e:
             print('Rotational Motor: ' + device.getName() + ' has no Position Sensor')
-       
- 
+
+
 target_pos_old = np.zeros((3))
-target_rot_old = np.zeros((3,3))
+target_rot_old = np.zeros((3, 3))
 print('-------------------------------------------------------')
 print('Move or rotate the TARGET sphere to move the arm...')
 while supervisor.step(IKstepSize*timeStep) != -1:
     # Get the target position relative to the arm
-    target_pos, target_rot = RelPos.get_pos('TARGET')    
+    target_pos, target_rot = RelPos.get_pos('TARGET')
     # check if our TARGET position or rotation has changed. If not, skip ik calculations (computationally intensive)
     if not np.array_equal(target_pos, target_pos_old) or not np.array_equal(target_rot, target_rot_old):
-        # Call the ik_module to compute the inverse kinematics of the arm.   
+        # Call the ik_module to compute the inverse kinematics of the arm.
         if useRotation:
             ikResults = ik.get_ik(target_pos, target_rot)
-        else: 
+        else:
             ikResults = ik.get_ik(target_pos)
         # set the motor positions to the calculated ik solution
         for i in range(len(motors)):
             motors[i].setPosition(ikResults[i + 1])
     target_pos_old = target_pos
     target_rot_old = target_rot
-
