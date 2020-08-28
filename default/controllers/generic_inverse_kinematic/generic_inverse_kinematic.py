@@ -28,8 +28,14 @@ from spawn_target import spawnTarget
 # is only relevant, if the target is constantly changing, as no new IK
 # solution gets calculated, if the target did not change.
 IKstepSize = 10 
+
+# Whether we want to want to solve for the Target rotation
 useRotation = True
-last_link_vector = None#[0, 0.12, 0]
+
+# For some robots, the last link might be a motor (the last active_links value is False).
+# If this is the case, you can add a translation vector, from the last motor join to the
+# Toolslot. The uncommented example is for the UR10e
+last_link_vector = None  # [0, 0.12, 0]
 
 
 # ----------------------------------------------------------
