@@ -28,6 +28,9 @@ from spawn_target import spawnTarget
 # is only relevant, if the target is constantly changing, as no new IK
 # solution gets calculated, if the target did not change.
 IKstepSize = 10 
+useRotation = True
+last_link_vector = None#[0, 0.12, 0]
+
 
 # ----------------------------------------------------------
 # ----------------------------------------------------------
@@ -39,7 +42,7 @@ if not supervisor.getSupervisor():
 
 timeStep = int(supervisor.getBasicTimeStep())
 # Initialize our inverse kinematics module
-ik = inverseKinematics(supervisor)
+ik = inverseKinematics(supervisor,last_link_vector)
 
 # check if our world already has the TARGET node. If not, we spawn it.
 target = supervisor.getFromDef('TARGET')
@@ -62,8 +65,13 @@ for i in range(n):
     #print(device.getName(), '   - NodeType:', device.getNodeType())
     if device.getNodeType() == 54:
         motors.append(device)
-        sensors.append(device.getPositionSensor())
-        sensors[-1].enable(timeStep)       
+        sensor = device.getPositionSensor()
+        try:
+            sensor.getName()
+            sensors.append(sensor)
+            sensor.enable(timeStep)  
+        except:
+            print('Rotational Motor: ' + device.getName() + ' has no Position Sensor')
        
  
 target_pos_old = np.zeros((3))
@@ -76,7 +84,10 @@ while supervisor.step(IKstepSize*timeStep) != -1:
     # check if our TARGET position or rotation has changed. If not, skip ik calculations (computationally intensive)
     if not np.array_equal(target_pos, target_pos_old) or not np.array_equal(target_rot, target_rot_old):
         # Call the ik_module to compute the inverse kinematics of the arm.   
-        ikResults = ik.get_ik(target_pos, target_rot)
+        if useRotation:
+            ikResults = ik.get_ik(target_pos, target_rot)
+        else: 
+            ikResults = ik.get_ik(target_pos)
         # set the motor positions to the calculated ik solution
         for i in range(len(motors)):
             motors[i].setPosition(ikResults[i + 1])

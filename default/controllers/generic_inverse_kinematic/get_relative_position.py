@@ -4,9 +4,13 @@ class RelativePositions():
     def __init__(self, Supervisor):
         self.robot = Supervisor
 
-    def get_pos(self, DEF_target):
-        base = self.robot.getSelf()
+    def get_pos(self, DEF_target, DEF_base=None):
         target = self.robot.getFromDef(DEF_target)
+        if DEF_base is None:
+            base = self.robot.getSelf()            
+        else:
+            base = self.robot.getFromDef(DEF_base)
+        
         # Get the transposed rotation matrix of the base, so we can calculate poses of
         # everything relative to it.
         # Get orientation of the Node we want as our new reference frame and turn it into

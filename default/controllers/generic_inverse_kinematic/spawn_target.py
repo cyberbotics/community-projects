@@ -56,12 +56,9 @@ class spawnTarget():
         ]
         }
         """
-        # copy the target.png texture into our wold
-        filePath = supervisor.getWorldPath()
-        fileNameLength = len(filePath.split('/')[-1])
-        worldPath = filePath[:-fileNameLength]        
+        # copy the target.png texture into our wold  
         controllerPath = os.path.dirname(os.path.abspath(__file__))
-        worldPath = worldPath + 'textures/'
+        worldPath = os.path.dirname(supervisor.getWorldPath())+ '/textures/'
         if not os.path.exists(worldPath):
             os.makedirs(worldPath)
         copyfile(controllerPath + '/textures/target.png', worldPath + 'target.png')
