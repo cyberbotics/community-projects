@@ -79,3 +79,8 @@ Some executables may need to be compiled.
 ## Disclaimer
 
 This repository is not maintained by Cyberbotics, some projects may not work or not be up to date to be used with the latest version of Webots.
+
+## Other repositories with Webots simulations
+
+- [NAO robots dancing on "Staying Alive"](https://github.com/Milindi-Kodikara/Staying-Alive), see also [this video](https://youtu.be/IYwThZKIoSA).
+
